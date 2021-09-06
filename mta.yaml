@@ -1,0 +1,71 @@
+## Generated mta.yaml based on template version 0.4.0
+## appName = Karma
+## language=java; multiTenant=false
+## approuter=
+_schema-version: '3.1'
+ID: Karma
+version: 1.0.0-SNAPSHOT
+description: "Karma application"
+parameters:
+  enable-parallel-deployments: true
+
+build-parameters:
+  before-all:
+   - builder: custom
+     commands:
+      - npm install --production
+      - cds build --production
+
+modules:
+ # --------------------- SERVER MODULE ------------------------
+ - name: Karma-srv
+ # ------------------------------------------------------------
+   type: java
+   path: srv
+   properties:
+     SPRING_PROFILES_ACTIVE: cloud
+   build-parameters:
+     builder: custom
+     commands: [ mvn clean package ]
+     build-result: "target/*.[wj]ar"
+   requires:
+    # Resources extracted from CAP configuration
+    - name: Karma-db
+    - name: Karma_Java-destination-service
+   provides:
+    - name: srv-api      # required by consumers of CAP services (e.g. approuter)
+      properties:
+        srv-url: ${default-url}
+
+ # -------------------- SIDECAR MODULE ------------------------
+ - name: Karma-db-deployer
+ # ------------------------------------------------------------
+   type: hdb
+   path: db
+   parameters:
+     buildpack: nodejs_buildpack
+   requires:
+    # 'hana' and 'xsuaa' resources extracted from CAP configuration
+    - name: Karma-db
+
+
+resources:
+ # services extracted from CAP configuration
+ # 'service-plan' can be configured via 'cds.requires.<name>.vcap.plan'
+# ------------------------------------------------------------
+ - name: Karma-db
+# ------------------------------------------------------------
+   type: com.sap.xs.hdi-container
+   parameters:
+     service: hanatrial  # or 'hanatrial' on trial landscapes
+   properties:
+     hdi-service-name: ${service-name}
+
+ - name: Karma_Java-destination-service
+   type: org.cloudfoundry.managed-service
+   parameters:
+     service: destination
+     service-name: Karma_Java-destination-service
+     service-plan: lite
+
+

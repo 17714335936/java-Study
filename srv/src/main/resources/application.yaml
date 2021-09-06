@@ -1,0 +1,21 @@
+---
+spring:
+cds:
+  odata-v2.endpoint.path: "/api"
+#  security.mock.users:
+#    - name: user
+#      password: password
+#      roles: admin
+server.servlet.encoding:
+  charset: UTF-8
+  force: true
+
+  profiles: default
+  datasource:
+    url: "jdbc:sqlite:file::memory:?cache=shared"
+    driver-class-name: org.sqlite.JDBC
+    initialization-mode: always
+    hikari:
+      maximum-pool-size: 1
+server:
+  port: 8090

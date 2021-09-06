@@ -1,0 +1,559 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body><PRE><PLAINTEXT>
+Java version: 11
+ClassLoader: jdk.internal.loader.ClassLoaders$AppClassLoader@7b1d7fff
+Process ID: 12756
+Driver version: package com.sap.db.jdbc, Java Platform API Specification, version 1.8, SAP HANA JDBC Driver, SAP SE, 2.5.52-256c19eeb7c7caa9d0e269b063a4121c7f3cc0b5
+Trace configuration:
+  Levels:                                       API,CONNECTIONS
+  Show plain-text client-side encrypted values: Disabled
+  Show timestamps:                              Disabled
+  Show elapsed times:                           Disabled
+  Trace file size:                              Unlimited 
+  Stop on error:                                Disabled
+
+---- Thread 3313d477 main
+com.sap.db.jdbc.Driver@f245bdd.acceptsURL("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true")
+=> true
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@2dc39b53
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@3fb450d7 HanaConnectionClean@2dc39b53 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@3fb450d7 HanaConnectionClean@2dc39b53 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@3fb450d7 HanaConnectionClean@2dc39b53 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250803 SessionID:1217461185496925 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:62574 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@2dc39b53[ID:250803]
+=> com.sap.db.jdbc.HanaConnectionClean@2dc39b53[ID:250803]
+com.sap.db.jdbc.HanaConnectionClean@2dc39b53[ID:250803].getNetworkTimeout()
+com.sap.db.jdbc.HanaConnectionClean@2dc39b53[ID:250803].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@2dc39b53[ID:250803].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@2dc39b53[ID:250803].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@2dc39b53[ID:250803].isValid(1)
+=> true
+com.sap.db.jdbc.HanaConnectionClean@2dc39b53[ID:250803].getTransactionIsolation()
+=> 2
+com.sap.db.jdbc.HanaConnectionClean@2dc39b53[ID:250803].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.HanaConnectionClean@2dc39b53[ID:250803].getMetaData()
+=> com.sap.db.jdbc.HanaDatabaseMetaData@4d0e1a9a
+com.sap.db.jdbc.HanaDatabaseMetaData@4d0e1a9a.getDatabaseProductName()
+=> "HDB"
+com.sap.db.jdbc.HanaConnectionClean@2dc39b53[ID:250803].clearWarnings()
+=> void
+---- Thread 6b0996a2 HikariPool-1 connection adder
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@65ce75b3
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@61f1fdd2 HanaConnectionClean@65ce75b3 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@61f1fdd2 HanaConnectionClean@65ce75b3 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@61f1fdd2 HanaConnectionClean@65ce75b3 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250811 SessionID:1217505812560965 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:59933 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@65ce75b3[ID:250811]
+=> com.sap.db.jdbc.HanaConnectionClean@65ce75b3[ID:250811]
+com.sap.db.jdbc.HanaConnectionClean@65ce75b3[ID:250811].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@65ce75b3[ID:250811].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@65ce75b3[ID:250811].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@65ce75b3[ID:250811].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@39eb2479
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@4714033a HanaConnectionClean@39eb2479 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@4714033a HanaConnectionClean@39eb2479 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@4714033a HanaConnectionClean@39eb2479 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250814 SessionID:1217501736879093 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:59939 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@39eb2479[ID:250814]
+=> com.sap.db.jdbc.HanaConnectionClean@39eb2479[ID:250814]
+com.sap.db.jdbc.HanaConnectionClean@39eb2479[ID:250814].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@39eb2479[ID:250814].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@39eb2479[ID:250814].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@39eb2479[ID:250814].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@713e284f
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@666ba9c7 HanaConnectionClean@713e284f zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@666ba9c7 HanaConnectionClean@713e284f zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@666ba9c7 HanaConnectionClean@713e284f zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250820 SessionID:1217559076456864 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:59942 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@713e284f[ID:250820]
+=> com.sap.db.jdbc.HanaConnectionClean@713e284f[ID:250820]
+com.sap.db.jdbc.HanaConnectionClean@713e284f[ID:250820].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@713e284f[ID:250820].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@713e284f[ID:250820].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@713e284f[ID:250820].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@4f31ff75
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@55172ab7 HanaConnectionClean@4f31ff75 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@55172ab7 HanaConnectionClean@4f31ff75 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@55172ab7 HanaConnectionClean@4f31ff75 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250825 SessionID:1217564902053323 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:59943 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@4f31ff75[ID:250825]
+=> com.sap.db.jdbc.HanaConnectionClean@4f31ff75[ID:250825]
+com.sap.db.jdbc.HanaConnectionClean@4f31ff75[ID:250825].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@4f31ff75[ID:250825].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@4f31ff75[ID:250825].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@4f31ff75[ID:250825].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@2605a3a
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@24caac94 HanaConnectionClean@2605a3a zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@24caac94 HanaConnectionClean@2605a3a zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@24caac94 HanaConnectionClean@2605a3a zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250827 SessionID:1217552795241195 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:59949 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@2605a3a[ID:250827]
+=> com.sap.db.jdbc.HanaConnectionClean@2605a3a[ID:250827]
+com.sap.db.jdbc.HanaConnectionClean@2605a3a[ID:250827].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@2605a3a[ID:250827].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@2605a3a[ID:250827].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@2605a3a[ID:250827].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@541e8707
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@445ab85a HanaConnectionClean@541e8707 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@445ab85a HanaConnectionClean@541e8707 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@445ab85a HanaConnectionClean@541e8707 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250828 SessionID:1217566303639407 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:59953 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@541e8707[ID:250828]
+=> com.sap.db.jdbc.HanaConnectionClean@541e8707[ID:250828]
+com.sap.db.jdbc.HanaConnectionClean@541e8707[ID:250828].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@541e8707[ID:250828].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@541e8707[ID:250828].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@541e8707[ID:250828].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@30d156e0
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@6f223ecc HanaConnectionClean@30d156e0 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@6f223ecc HanaConnectionClean@30d156e0 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@6f223ecc HanaConnectionClean@30d156e0 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250830 SessionID:1217573051040292 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:59955 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@30d156e0[ID:250830]
+=> com.sap.db.jdbc.HanaConnectionClean@30d156e0[ID:250830]
+com.sap.db.jdbc.HanaConnectionClean@30d156e0[ID:250830].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@30d156e0[ID:250830].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@30d156e0[ID:250830].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@30d156e0[ID:250830].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@65ff5614
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@5f3459b3 HanaConnectionClean@65ff5614 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@5f3459b3 HanaConnectionClean@65ff5614 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@5f3459b3 HanaConnectionClean@65ff5614 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250832 SessionID:1217576624940910 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:59957 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@65ff5614[ID:250832]
+=> com.sap.db.jdbc.HanaConnectionClean@65ff5614[ID:250832]
+com.sap.db.jdbc.HanaConnectionClean@65ff5614[ID:250832].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@65ff5614[ID:250832].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@65ff5614[ID:250832].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@65ff5614[ID:250832].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@6c9fb092
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@3aab51b HanaConnectionClean@6c9fb092 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@3aab51b HanaConnectionClean@6c9fb092 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@3aab51b HanaConnectionClean@6c9fb092 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250833 SessionID:1217589465700388 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:59958 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@6c9fb092[ID:250833]
+=> com.sap.db.jdbc.HanaConnectionClean@6c9fb092[ID:250833]
+com.sap.db.jdbc.HanaConnectionClean@6c9fb092[ID:250833].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@6c9fb092[ID:250833].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@6c9fb092[ID:250833].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@6c9fb092[ID:250833].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@44da7eb3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+---- Thread 743d0a13 http-nio-8090-exec-1
+com.sap.db.jdbc.Driver@f245bdd.acceptsURL("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true")
+=> true
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@6d5e1c21
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@49abd41 HanaConnectionClean@6d5e1c21 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@49abd41 HanaConnectionClean@6d5e1c21 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@49abd41 HanaConnectionClean@6d5e1c21 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250916 SessionID:1217940889057117 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:60044 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916]
+=> com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916]
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].getNetworkTimeout()
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].isValid(1)
+=> true
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].getTransactionIsolation()
+=> 2
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setAutoCommit(false)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].getMetaData()
+=> com.sap.db.jdbc.HanaDatabaseMetaData@89da341
+com.sap.db.jdbc.HanaDatabaseMetaData@89da341.getDatabaseProductName()
+=> "HDB"
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("LOCALE", null)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("VALID-FROM", null)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("VALID-TO", null)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("APPLICATIONUSER", null)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("LOCALE", null)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("VALID-FROM", "2021-09-06T10:45:54.615135600Z")
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("VALID-TO", "2021-09-06T10:45:54.616135600Z")
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("APPLICATIONUSER", "anonymous")
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].rollback()
+---- Thread 58826c3c HikariPool-2 connection adder
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@5645895c
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@527a074c HanaConnectionClean@5645895c zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+---- Thread 743d0a13 http-nio-8090-exec-1
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setAutoCommit(true)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].clearWarnings()
+=> void
+---- Thread 58826c3c HikariPool-2 connection adder
+Session message: com.sap.db.jdbc.SecureChannelSession@527a074c HanaConnectionClean@5645895c zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@527a074c HanaConnectionClean@5645895c zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250920 SessionID:1217972897871034 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:60046 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@5645895c[ID:250920]
+=> com.sap.db.jdbc.HanaConnectionClean@5645895c[ID:250920]
+com.sap.db.jdbc.HanaConnectionClean@5645895c[ID:250920].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@5645895c[ID:250920].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@5645895c[ID:250920].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@5645895c[ID:250920].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@7908e27f
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@26f71abd HanaConnectionClean@7908e27f zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@26f71abd HanaConnectionClean@7908e27f zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@26f71abd HanaConnectionClean@7908e27f zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250923 SessionID:1217972377531424 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:60048 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@7908e27f[ID:250923]
+=> com.sap.db.jdbc.HanaConnectionClean@7908e27f[ID:250923]
+com.sap.db.jdbc.HanaConnectionClean@7908e27f[ID:250923].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@7908e27f[ID:250923].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@7908e27f[ID:250923].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@7908e27f[ID:250923].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@45632b8b
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@2239e499 HanaConnectionClean@45632b8b zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@2239e499 HanaConnectionClean@45632b8b zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@2239e499 HanaConnectionClean@45632b8b zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250926 SessionID:1217985278604340 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:60050 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@45632b8b[ID:250926]
+=> com.sap.db.jdbc.HanaConnectionClean@45632b8b[ID:250926]
+com.sap.db.jdbc.HanaConnectionClean@45632b8b[ID:250926].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@45632b8b[ID:250926].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@45632b8b[ID:250926].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@45632b8b[ID:250926].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@79d4ac17
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@6b1fe62c HanaConnectionClean@79d4ac17 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@6b1fe62c HanaConnectionClean@79d4ac17 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@6b1fe62c HanaConnectionClean@79d4ac17 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250930 SessionID:1218029680793964 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:60052 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@79d4ac17[ID:250930]
+=> com.sap.db.jdbc.HanaConnectionClean@79d4ac17[ID:250930]
+com.sap.db.jdbc.HanaConnectionClean@79d4ac17[ID:250930].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@79d4ac17[ID:250930].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@79d4ac17[ID:250930].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@79d4ac17[ID:250930].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@7b3ddf25
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@5d06d057 HanaConnectionClean@7b3ddf25 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@5d06d057 HanaConnectionClean@7b3ddf25 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@5d06d057 HanaConnectionClean@7b3ddf25 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250931 SessionID:1218005853534172 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:60053 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@7b3ddf25[ID:250931]
+=> com.sap.db.jdbc.HanaConnectionClean@7b3ddf25[ID:250931]
+com.sap.db.jdbc.HanaConnectionClean@7b3ddf25[ID:250931].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@7b3ddf25[ID:250931].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@7b3ddf25[ID:250931].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@7b3ddf25[ID:250931].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@6e5f40de
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@1ab95a83 HanaConnectionClean@6e5f40de zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@1ab95a83 HanaConnectionClean@6e5f40de zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@1ab95a83 HanaConnectionClean@6e5f40de zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250932 SessionID:1218038793444517 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:60055 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@6e5f40de[ID:250932]
+=> com.sap.db.jdbc.HanaConnectionClean@6e5f40de[ID:250932]
+com.sap.db.jdbc.HanaConnectionClean@6e5f40de[ID:250932].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@6e5f40de[ID:250932].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@6e5f40de[ID:250932].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@6e5f40de[ID:250932].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@4fcfabfc
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@3c6a7b6c HanaConnectionClean@4fcfabfc zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@3c6a7b6c HanaConnectionClean@4fcfabfc zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@3c6a7b6c HanaConnectionClean@4fcfabfc zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250938 SessionID:1218041937681048 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:60057 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@4fcfabfc[ID:250938]
+=> com.sap.db.jdbc.HanaConnectionClean@4fcfabfc[ID:250938]
+com.sap.db.jdbc.HanaConnectionClean@4fcfabfc[ID:250938].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@4fcfabfc[ID:250938].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@4fcfabfc[ID:250938].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@4fcfabfc[ID:250938].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@62ab1ed2
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@1e5fd812 HanaConnectionClean@62ab1ed2 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@1e5fd812 HanaConnectionClean@62ab1ed2 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@1e5fd812 HanaConnectionClean@62ab1ed2 zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250941 SessionID:1218049023425943 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:60059 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@62ab1ed2[ID:250941]
+=> com.sap.db.jdbc.HanaConnectionClean@62ab1ed2[ID:250941]
+com.sap.db.jdbc.HanaConnectionClean@62ab1ed2[ID:250941].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@62ab1ed2[ID:250941].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@62ab1ed2[ID:250941].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@62ab1ed2[ID:250941].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.Driver@f245bdd.connect("jdbc:sap://zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803?encrypt=true&currentSchema=CAD8A90DF4254113801D319A2B88284C&validateCertificate=true", {password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT})
+Connection opening: com.sap.db.jdbc.HanaConnectionClean@2dbf4f4e
+  Properties:         {currentSchema=CAD8A90DF4254113801D319A2B88284C, encrypt=true, password=***, user=CAD8A90DF4254113801D319A2B88284C_481OUREGPGD3LDKT8WZRKJ3FG_RT, validateCertificate=true}
+  PreferredAddresses: [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+  ResolvedAddresses:  [zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803]
+Session opening: com.sap.db.jdbc.SecureChannelSession@46be5006 HanaConnectionClean@2dbf4f4e zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803
+Session message: com.sap.db.jdbc.SecureChannelSession@46be5006 HanaConnectionClean@2dbf4f4e zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 Port-forwarding detected: Ignoring topology
+  Cached:   23803
+  Received: 30041
+Session opened: com.sap.db.jdbc.SecureChannelSession@46be5006 HanaConnectionClean@2dbf4f4e zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com:23803 ConnectionID:250943 SessionID:1218046687591140 on sun.nio.ch.WindowsAsynchronousSocketChannelImpl[connected local=/0:0:0:0:0:0:0:0:60060 remote=zeus.hana.prod.eu-central-1.whitney.dbaas.ondemand.com/18.196.126.43:23803]
+Connection opened: com.sap.db.jdbc.HanaConnectionClean@2dbf4f4e[ID:250943]
+=> com.sap.db.jdbc.HanaConnectionClean@2dbf4f4e[ID:250943]
+com.sap.db.jdbc.HanaConnectionClean@2dbf4f4e[ID:250943].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@2dbf4f4e[ID:250943].isReadOnly()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@2dbf4f4e[ID:250943].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@2dbf4f4e[ID:250943].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+---- Thread 1c4f5243 http-nio-8090-exec-4
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].isValid(5)
+=> true
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setAutoCommit(false)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("LOCALE", null)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("VALID-FROM", null)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("VALID-TO", null)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("APPLICATIONUSER", null)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("LOCALE", null)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("VALID-FROM", "2021-09-06T10:46:28.091799900Z")
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("VALID-TO", "2021-09-06T10:46:28.092799900Z")
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("APPLICATIONUSER", "anonymous")
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].getAutoCommit()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].prepareStatement("INSERT INTO KarmaService_Customer (A_ID, ID, createdAt, createdBy, custEmail, custName, modifiedAt, modifiedBy, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)")
+=> com.sap.db.jdbc.HanaPreparedStatementClean@5ac7c5f1
+com.sap.db.jdbc.HanaPreparedStatementClean@5ac7c5f1.setString(1, "9cc7f6f9-8ed7-47ed-8e8f-16e53a5ebe65")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@5ac7c5f1.setString(2, "f7c04b58-2639-4f1d-9cd5-faab09037a45")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@5ac7c5f1.setTimestamp(3, 2021-09-06 18:46:28.290269, java.util.GregorianCalendar[time=1630925188504,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2021,MONTH=8,WEEK_OF_YEAR=37,WEEK_OF_MONTH=2,DAY_OF_MONTH=6,DAY_OF_YEAR=249,DAY_OF_WEEK=2,DAY_OF_WEEK_IN_MONTH=1,AM_PM=0,HOUR=10,HOUR_OF_DAY=10,MINUTE=46,SECOND=28,MILLISECOND=504,ZONE_OFFSET=0,DST_OFFSET=0])
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@5ac7c5f1.setObject(4, "anonymous")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@5ac7c5f1.setObject(5, "591062262@qq.com")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@5ac7c5f1.setObject(6, "custName")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@5ac7c5f1.setTimestamp(7, 2021-09-06 18:46:28.290269, java.util.GregorianCalendar[time=1630925188504,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="UTC",offset=0,dstSavings=0,useDaylight=false,transitions=0,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2021,MONTH=8,WEEK_OF_YEAR=37,WEEK_OF_MONTH=2,DAY_OF_MONTH=6,DAY_OF_YEAR=249,DAY_OF_WEEK=2,DAY_OF_WEEK_IN_MONTH=1,AM_PM=0,HOUR=10,HOUR_OF_DAY=10,MINUTE=46,SECOND=28,MILLISECOND=504,ZONE_OFFSET=0,DST_OFFSET=0])
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@5ac7c5f1.setObject(8, "anonymous")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@5ac7c5f1.setObject(9, "17714335936")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@5ac7c5f1.executeUpdate()
+=> 1
+com.sap.db.jdbc.HanaPreparedStatementClean@5ac7c5f1.close()
+Statement queued for lazy drop: [8e c2 99 ab 24 d4 03 00]
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].getAutoCommit()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].prepareStatement("INSERT INTO KarmaService_Address (ID, PARENT_KEY, address, addressType, city, pin, state) VALUES (?, ?, ?, ?, ?, ?, ?)")
+Statements dequeued for lazy drop: [[8e c2 99 ab 24 d4 03 00]]
+=> com.sap.db.jdbc.HanaPreparedStatementClean@a9ca25f
+com.sap.db.jdbc.HanaPreparedStatementClean@a9ca25f.setString(1, "5aac029b-1316-4ddf-89f4-e353a59bf713")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@a9ca25f.setString(2, "f7c04b58-2639-4f1d-9cd5-faab09037a45")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@a9ca25f.setObject(3, "4")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@a9ca25f.setObject(4, "Home")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@a9ca25f.setObject(5, "2")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@a9ca25f.setObject(6, "3")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@a9ca25f.setObject(7, "1")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@a9ca25f.executeUpdate()
+=> 1
+com.sap.db.jdbc.HanaPreparedStatementClean@a9ca25f.close()
+Statement queued for lazy drop: [62 1e bb a0 24 d4 03 00]
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].commit()
+Statements dequeued for lazy drop: [[62 1e bb a0 24 d4 03 00]]
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setAutoCommit(true)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].clearWarnings()
+=> void
+---- Thread 78230682 http-nio-8090-exec-5
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 5000)
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].isValid(5)
+=> true
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setNetworkTimeout(java.util.concurrent.ThreadPoolExecutor@6ffee108[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], 0)
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].getAutoCommit()
+=> true
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setAutoCommit(false)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("LOCALE", null)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("VALID-FROM", null)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("VALID-TO", null)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("APPLICATIONUSER", null)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("LOCALE", null)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("VALID-FROM", "2021-09-06T10:47:02.294366800Z")
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("VALID-TO", "2021-09-06T10:47:02.295366800Z")
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setClientInfo("APPLICATIONUSER", "anonymous")
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].getAutoCommit()
+=> false
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].prepareStatement("INSERT INTO KarmaService_Clientes_libros (ID, cliente_ID, libro_ID) VALUES (?, ?, ?)")
+=> com.sap.db.jdbc.HanaPreparedStatementClean@480c2934
+com.sap.db.jdbc.HanaPreparedStatementClean@480c2934.setString(1, "159ce8ab-f7e8-4da1-bbc4-ba95d48fe3c8")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@480c2934.setString(2, "bec843d7-d828-4de4-8c5e-d44c978e2124")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@480c2934.setString(3, "d09be414-a556-4408-9e39-2c4f274cba18")
+=> void
+com.sap.db.jdbc.HanaPreparedStatementClean@480c2934.executeUpdate()
+=> 1
+com.sap.db.jdbc.HanaPreparedStatementClean@480c2934.close()
+Statement queued for lazy drop: [bd 54 1e e3 24 d4 03 00]
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].commit()
+Statements dequeued for lazy drop: [[bd 54 1e e3 24 d4 03 00]]
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].setAutoCommit(true)
+=> void
+com.sap.db.jdbc.HanaConnectionClean@6d5e1c21[ID:250916].clearWarnings()
+=> void

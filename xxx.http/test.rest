@@ -1,0 +1,39 @@
+#Post
+http://localhost:8090/api/admin/Clientes
+{
+    "nombre": "123",
+    "fechaNacimiento": "2021-09-06",
+    "DNI": "123"
+}
+
+#POST
+http://localhost:8090/api/admin/Clientes_libros
+{
+    "cliente_ID": "bec843d7-d828-4de4-8c5e-d44c978e2124",
+    "libro_ID": "12bf4a6e-f4f8-4d22-94e7-f586c4af86dd"
+}
+
+#POST
+http://localhost:8090/api/admin/Customer
+{
+    "custName": "custName",
+    "custEmail": "591062262@qq.com",
+    "phone": "17714335936",
+    "A_ID": "9cc7f6f9-8ed7-47ed-8e8f-16e53a5ebe65",
+    "custAddress": [
+        {
+            "state": "1",
+            "city": "2",
+            "pin": "3",
+            "address": "4",
+            "addressType": "Home"
+        }
+    ]
+}
+
+#POST
+http://localhost:8090/api/admin/Customer(guid'3dd0d7f5-8b68-4bf1-bb05-6516bfd8772c')/clientesVendidos
+{
+    "cliente_ID": "bec843d7-d828-4de4-8c5e-d44c978e2124",
+    "libro_ID": "a8e4a160-b699-46af-bbf1-f6aadef34835"
+}
